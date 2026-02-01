@@ -230,6 +230,7 @@ void FifLEDrvInit(void)
 {
   if (PinUsed(GPIO_LE01MR_RX) && PinUsed(GPIO_LE01MR_TX)) {
     TasmotaGlobal.energy_driver = XNRG_13;
+    AddLog(LOG_LEVEL_INFO, PSTR("FIF: LE01Mx Modbus Energy Meter (Addr:%d, %d bps)"), LE01MR_ADDR, LE01MR_SPEED);
   }
 }
 
